@@ -1,0 +1,232 @@
+
+/* Fonts */
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/Libre_Baskerville/static/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('fonts/Libre_Baskerville/static/LibreBaskerville-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fonts/Libre_Franklin/static/LibreFranklin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fonts/Libre_Franklin/static/LibreFranklin-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fonts/Libre_Franklin/static/LibreFranklin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fonts/Libre_Franklin/static/LibreFranklin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+  --font-serif: 'Libre Baskerville', serif;
+  --font-sans: 'Libre Franklin', sans-serif;
+  --accent: #7A1E1A;
+  --accent-hover: #A3473F;
+  /* chart series colours need to match trace colours in chart-data.js,
+     from notebooks/01_data_analysis.ipynb. */
+  --series-rose: #236534;   /* rank-shift: rose >3 ranks, China */
+  --series-flat: #C9BFBA;   /* rank-shift: shift of 3 or fewer */
+  --series-uk:   #B7A9A3;
+  --series-ca:   #7F6A58;
+  --series-de:   #A8917A;
+  --rule: #DAD7D7;
+  --bg: #F7F7F7;
+  --content-max: 1000px; /* text column and figures */
+  --text-max: 960px;     /* content-max minus .page's 20px side padding */
+}
+
+* { box-sizing: border-box; }
+
+/* fluid type scale: root font-size (and everything rem below)
+   scales continuously with viewport width */
+html {
+  font-size: clamp(15px, calc(12.82px + 0.68vw), 18px);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: black;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden; /* safety for the .figure breakout's 100vw width below */
+}
+
+.page {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 56px 20px 80px;
+}
+
+header.hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #444;
+  margin: 0 0 10px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.attribution {
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: #444;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.45rem;
+  margin: 56px 0 18px;
+  border-top: 1px solid var(--rule);
+  padding-top: 40px;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 28px 0 10px;
+}
+
+p { margin: 0 0 18px; }
+
+ul { margin: 0 0 18px; padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+
+em { font-style: italic; }
+
+/* figures break out of the text column by spanning the full viewport width
+   and re-centering their own content (.chart-wrap) at --content-max */
+.figure {
+  width: 100vw;
+  margin: 24px calc(50% - 50vw) 12px;
+  padding: 0 20px;
+}
+
+.chart-wrap { max-width: var(--content-max); margin: 0 auto; }
+.chart-title {
+  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700;
+  text-align: center; margin: 0 0 4px; color: black;
+  border-top: none; padding-top: 0;
+}
+.chart-subtitle {
+  font-size: 0.85rem;
+  text-align: center; margin: 0 0 12px; color: black;
+}
+.chart-legend {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 4px 20px; margin: 0 0 8px;
+  font-size: 0.8rem; color: black;
+}
+.chart-legend .dot {
+  display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+  margin-right: 5px; vertical-align: middle;
+}
+/* one swatch colour per series; --fell and --us share accent red, but charts name their own for readability  */
+.dot--fell, .dot--us { background: var(--accent); }
+.dot--rose, .dot--cn { background: var(--series-rose); }
+.dot--flat { background: var(--series-flat); }
+.dot--uk   { background: var(--series-uk); }
+.dot--ca   { background: var(--series-ca); }
+.dot--de   { background: var(--series-de); }
+
+/* chart box sizes, map is driven by the padding-top aspect box below; other two are
+   the fixed heights from export */
+.plotly-graph-div { width: 100%; }
+.figure-embed--rankshift .plotly-graph-div { height: 480px; }
+.figure-embed--trend .plotly-graph-div { height: 460px; }
+
+/* charts have no min-width; overflow-x stays as a guard only */
+.chart-scroll { overflow-x: auto; }
+
+/* map only */
+.figure-embed--map .chart-inner {
+  position: relative;
+  padding-top: 50%;
+  min-height: 340px;
+}
+.figure-embed--map .chart-inner .plotly-graph-div {
+  position: absolute !important; inset: 0;
+  width: 100% !important; height: 100% !important;
+}
+
+/* trend: smaller chart than title */
+.figure-embed--trend .chart-scroll { max-width: 850px; margin: 0 auto; }
+
+/* aligned with the main text column rather than centered under the (wider) figure:
+   .figure has the same 20px side padding as .page, so --text-max box
+   auto-centered here has same edges as p in .page */
+.figure-caption {
+  max-width: var(--text-max);
+  margin: 10px auto 0;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.works-cited li {
+  font-size: 0.92rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+footer a { color: var(--accent); }
+
+/* beyond 1200px, give the text column more room from the edges */
+@media (min-width: 1200px) {
+  .page { padding-left: 60px; padding-right: 60px; }
+  .figure-caption { max-width: 880px; } /* 1000 - 2*60, matching .page above */
+}
+
+@media (max-width: 480px) {
+  .page { padding: 36px 16px 60px; }
+  h2 { margin-top: 44px; padding-top: 32px; }
+  .figure { padding: 0 16px; }
+}
