@@ -652,7 +652,7 @@ window.CHART_SPECS = [
   },
   "margin": {
     "t": 30,
-    "b": 100,
+    "b": 60,
     "l": 90,
     "r": 40
   },
