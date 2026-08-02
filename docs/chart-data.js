@@ -78,7 +78,7 @@ window.CHART_SPECS = [
 }},
 {"id": "c2",
  "data": [
-  {"hoverinfo": "skip", "marker": {"color": ["#C9BFBA", "#4A4A4A", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#4A4A4A", "#C9BFBA", "#7A1E1A", "#4A4A4A", "#4A4A4A"]}, "orientation": "h", "showlegend": false, "x": [0.257, 0.451, 0.597, 0.727, 0.729, 0.955, 1.277, 2.24, 2.32, 2.787, 2.882, 3.446, 3.788, 3.929, 4.042], "y": ["India", "China", "Iran", "Russia", "South Korea", "Japan", "Brazil", "France", "Italy", "Spain", "Germany", "Australia", "United States", "Canada", "United Kingdom"], "type": "bar"}
+  {"hoverinfo": "skip", "marker": {"color": ["white", "#4A4A4A", "white", "white", "white", "white", "white", "white", "white", "white", "#4A4A4A", "white", "#7A1E1A", "#4A4A4A", "#4A4A4A"]}, "orientation": "h", "showlegend": false, "x": [0.257, 0.451, 0.597, 0.727, 0.729, 0.955, 1.277, 2.24, 2.32, 2.787, 2.882, 3.446, 3.788, 3.929, 4.042], "y": ["India", "China", "Iran", "Russia", "South Korea", "Japan", "Brazil", "France", "Italy", "Spain", "Germany", "Australia", "United States", "Canada", "United Kingdom"], "type": "bar"}
  ],
  "layout": {
   "template": {
@@ -326,11 +326,11 @@ window.CHART_SPECS = [
     "zeroline": false,
     "range": [
       0,
-      4.446378851064064
+      4.062373404835803
     ],
     "domain": [
-      0.26,
-      0.9
+      0,
+      1
     ]
   },
   "yaxis": {
@@ -358,10 +358,10 @@ window.CHART_SPECS = [
     "bordercolor": "rgba(0, 0, 0, 0.1)"
   },
   "margin": {
-    "t": 48,
+    "t": 20,
     "b": 50,
-    "l": 20,
-    "r": 20
+    "l": 125,
+    "r": 51
   },
   "autosize": true,
   "paper_bgcolor": "#FAFAFA",
@@ -440,7 +440,7 @@ window.CHART_SPECS = [
       "text": "<b>Share of world psychology publications (%)</b>"
     },
     "showgrid": true,
-    "gridcolor": "#E5E5E5",
+    "gridcolor": "#FAFAFA",
     "zeroline": false,
     "automargin": false
   },
@@ -470,7 +470,7 @@ window.CHART_SPECS = [
 }},
 {"id": "c4",
  "data": [
-  {"customdata": [["China", 0.004505680519926876], ["United States", 0.037876057999823354], ["India", 0.0025688740519818863], ["Germany", 0.02881545670329934], ["Japan", 0.00954967144493654], ["United Kingdom", 0.04042162591876421], ["Italy", 0.023201342538636968], ["France", 0.022401199515637342], ["Russia", 0.007267419379711301], ["South Korea", 0.007291652671872384], ["Canada", 0.039289561965835586], ["Spain", 0.027867820564158857], ["Brazil", 0.012773964472705112], ["Australia", 0.03445750292131668], ["Iran", 0.005967938998741315]], "hovertemplate": "<b>%{customdata[0]}</b><br>%{x:,.0f} science publications<br>%{y:,.0f} psychology publications<br><extra></extra>", "marker": {"color": ["#236534", "#7A1E1A", "#C9BFBA", "#4A4A4A", "#C9BFBA", "#4A4A4A", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#4A4A4A", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA"], "line": {"color": "white", "width": 0.8}, "size": 11}, "mode": "markers", "showlegend": false, "x": [6192884.71, 5324328.63, 1442145.44, 1322304.22, 1263777.5099999998, 1226434.0899999999, 896570.1, 845754.7100000001, 786848.77, 782284.9299999999, 754991.1100000001, 705275.8199999998, 704136.9199999999, 659120.6, 535590.2599999999], "y": [27903.16, 201664.58000000002, 3704.69, 38102.8, 12068.66, 49574.46, 20801.63, 18945.920000000002, 5718.360000000001, 5704.150000000001, 29663.269999999997, 19654.499999999996, 8994.62, 22711.65, 3196.37], "type": "scatter"}
+  {"customdata": [["China", 0.004505680519926876], ["United States", 0.037876057999823354], ["India", 0.0025688740519818863], ["Germany", 0.02881545670329934], ["Japan", 0.00954967144493654], ["United Kingdom", 0.04042162591876421], ["Italy", 0.023201342538636968], ["France", 0.022401199515637342], ["Russia", 0.007267419379711301], ["South Korea", 0.007291652671872384], ["Canada", 0.039289561965835586], ["Spain", 0.027867820564158857], ["Brazil", 0.012773964472705112], ["Australia", 0.03445750292131668], ["Iran", 0.005967938998741315]], "hovertemplate": "<b>%{customdata[0]}</b><br>%{x:,.0f} science publications<br>%{y:,.0f} psychology publications<br><extra></extra>", "marker": {"color": ["#236534", "#7A1E1A", "white", "#4A4A4A", "white", "#4A4A4A", "white", "white", "white", "white", "#4A4A4A", "white", "white", "white", "white"], "line": {"color": "white", "width": 0.8}, "size": 11}, "mode": "markers", "showlegend": false, "x": [6192884.71, 5324328.63, 1442145.44, 1322304.22, 1263777.5099999998, 1226434.0899999999, 896570.1, 845754.7100000001, 786848.77, 782284.9299999999, 754991.1100000001, 705275.8199999998, 704136.9199999999, 659120.6, 535590.2599999999], "y": [27903.16, 201664.58000000002, 3704.69, 38102.8, 12068.66, 49574.46, 20801.63, 18945.920000000002, 5718.360000000001, 5704.150000000001, 29663.269999999997, 19654.499999999996, 8994.62, 22711.65, 3196.37], "type": "scatter"}
  ],
  "layout": {
   "template": {
@@ -592,7 +592,7 @@ window.CHART_SPECS = [
       "text": "<b>Science publications, all subjects</b>"
     },
     "showgrid": true,
-    "gridcolor": "#EAEAEA",
+    "gridcolor": "#FAFAFA",
     "zeroline": false,
     "tickvals": [
       500000.0,

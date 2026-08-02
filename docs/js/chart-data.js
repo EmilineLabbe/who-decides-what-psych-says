@@ -52,9 +52,9 @@ window.CHART_SPECS = [
     "showcountries": true,
     "countrycolor": "lightgray",
     "countrywidth": 0.5,
-    "landcolor": "#FAFAFA",
+    "landcolor": "white",
     "showframe": false,
-    "bgcolor": "#FAFAFA",
+    "bgcolor": "white",
     "fitbounds": "locations"
   },
   "margin": {
@@ -74,7 +74,7 @@ window.CHART_SPECS = [
     "bordercolor": "rgba(0, 0, 0, 0.1)"
   },
   "autosize": true,
-  "paper_bgcolor": "#FAFAFA"
+  "paper_bgcolor": "white"
 }},
 {"id": "c2",
  "data": [
@@ -364,8 +364,8 @@ window.CHART_SPECS = [
     "r": 51
   },
   "autosize": true,
-  "paper_bgcolor": "#FAFAFA",
-  "plot_bgcolor": "#FAFAFA",
+  "paper_bgcolor": "white",
+  "plot_bgcolor": "white",
   "bargap": 0.42
 }},
 {"id": "c3",
@@ -465,8 +465,8 @@ window.CHART_SPECS = [
     "r": 20
   },
   "autosize": true,
-  "paper_bgcolor": "#FAFAFA",
-  "plot_bgcolor": "#FAFAFA"
+  "paper_bgcolor": "white",
+  "plot_bgcolor": "white"
 }},
 {"id": "c4",
  "data": [
@@ -657,7 +657,7 @@ window.CHART_SPECS = [
     "r": 40
   },
   "autosize": true,
-  "paper_bgcolor": "#FAFAFA",
-  "plot_bgcolor": "#FAFAFA"
+  "paper_bgcolor": "white",
+  "plot_bgcolor": "white"
 }}
 ];
