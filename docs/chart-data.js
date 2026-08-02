@@ -330,7 +330,7 @@ window.CHART_SPECS = [
     ],
     "domain": [
       0.25,
-      0.99
+      0.9
     ]
   },
   "yaxis": {
