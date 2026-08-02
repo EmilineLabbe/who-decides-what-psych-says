@@ -99,10 +99,11 @@ h1 {
   margin: 0 0 10px;
 }
 
-.attribution {
+.footed {
   font-weight: 500;
   font-size: 0.7rem;
   color: #444;
+  text-align: left; margin: 0 0 5px;
 }
 
 h2 {
