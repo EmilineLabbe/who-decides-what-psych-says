@@ -50,7 +50,7 @@
   --series-ca:   #7F6A58;
   --series-de:   #A8917A;
   --rule: #DAD7D7;
-  --bg: #F7F7F7;
+  --bg: #FAFAFA;
   --content-max: 1000px; /* text column and figures */
   --text-max: 960px;     /* content-max minus .page's 20px side padding */
 }
