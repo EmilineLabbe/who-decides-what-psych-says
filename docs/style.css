@@ -46,9 +46,9 @@
      from notebooks/01_data_analysis.ipynb. */
   --series-rose: #236534;   /* rank-shift: rose >3 ranks, China */
   --series-flat: #C9BFBA;   /* rank-shift: shift of 3 or fewer */
-  --series-uk:   #B7A9A3;
-  --series-ca:   #7F6A58;
-  --series-de:   #A8917A;
+  --series-uk:   #8C9BA5;
+  --series-ca:   #B5A08C;
+  --series-de:   #6B5744;
   --rule: #DAD7D7;
   --bg: #FAFAFA;
   --content-max: 1000px; /* text column and figures */
