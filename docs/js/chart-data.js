@@ -60,7 +60,7 @@ window.CHART_SPECS = [
   "margin": {
     "t": 0,
     "b": 80,
-    "l": 10,
+    "l": 0,
     "r": 10,
     "autoexpand": false
   },
@@ -341,7 +341,8 @@ window.CHART_SPECS = [
     "showgrid": false,
     "zeroline": false,
     "showspikes": false,
-    "ticklabelstandoff": 16
+    "ticklabelstandoff": 16,
+    "automargin": false
   },
   "font": {
     "family": "Libre Franklin",
@@ -360,7 +361,7 @@ window.CHART_SPECS = [
   "margin": {
     "t": 20,
     "b": 50,
-    "l": 125,
+    "l": 109,
     "r": 51
   },
   "autosize": true,
@@ -461,7 +462,7 @@ window.CHART_SPECS = [
   "margin": {
     "t": 20,
     "b": 70,
-    "l": 90,
+    "l": 52,
     "r": 20
   },
   "autosize": true,
@@ -653,7 +654,7 @@ window.CHART_SPECS = [
   "margin": {
     "t": 30,
     "b": 55,
-    "l": 90,
+    "l": 70,
     "r": 40
   },
   "autosize": true,

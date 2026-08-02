@@ -151,18 +151,27 @@ em { font-style: italic; }
 }
 
 .chart-wrap { max-width: var(--content-max); margin: 0 auto; }
+/* charts stay centred in .chart-wrap, but titles, subtitles and
+   legends sit in --text-max box so left edge lines up with body */
 .chart-title {
   font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700;
-  text-align: center; margin: 0 0 4px; color: black;
+  text-align: left;
+  max-width: var(--text-max);
+  margin-left: auto; margin-right: auto;
+  color: black;
   border-top: none; padding-top: 0;
 }
 .chart-subtitle {
   font-size: 0.85rem;
-  text-align: center; margin: 0 0 0px; color: black;
+  text-align: left;
+  max-width: var(--text-max);
+  margin: 0 auto; color: black;
 }
 .chart-legend {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 4px 20px; margin: 12px 0 8px;
+  display: flex; flex-wrap: wrap; justify-content: flex-start;
+  gap: 4px 20px;
+  max-width: var(--text-max);
+  margin: 12px auto 8px;
   font-size: 0.8rem; color: black;
 }
 .chart-legend .dot {
@@ -184,13 +193,23 @@ em { font-style: italic; }
 .figure-embed--rankshift .plotly-graph-div { height: 480px; }
 .figure-embed--trend .plotly-graph-div { height: 460px; }
 
-/* charts have no min-width; overflow-x stays as a guard only */
-.chart-scroll { overflow-x: auto; }
+/* charts have no min-width; overflow-x stays as a guard only.
+   the --text-max box puts every chart's left edge on the body text column */
+.chart-scroll {
+  overflow-x: auto;
+  /* overflow-y would otherwise compute to auto and give the map a scrollbar for
+     the sub-pixel left over by its calc() aspect box */
+  overflow-y: hidden;
+  max-width: var(--text-max);
+  margin-left: auto; margin-right: auto;
+}
 
-/* map only */
+/* map only - leaving the map area any wider than 2:1 makes
+   plotly letterbox the projection horizontally and the map stops sitting flush
+   with the text column */
 .figure-embed--map .chart-inner {
   position: relative;
-  padding-top: 50%;
+  padding-top: calc(50% + 80px);
   min-height: 340px;
 }
 .figure-embed--map .chart-inner .plotly-graph-div {
@@ -198,16 +217,13 @@ em { font-style: italic; }
   width: 100% !important; height: 100% !important;
 }
 
-/* trend: smaller chart than title */
-.figure-embed--trend .chart-scroll { max-width: 850px; margin: 0 auto; }
-
-
-.figure-embed--rankshift .chart-scroll { max-width: var(--text-max); margin: 0 auto; }
+/* trend: smaller chart than title, flush left inside the text column */
+.figure-embed--trend .chart-inner { max-width: 850px; }
 
 
 .figure-caption {
   max-width: var(--text-max);
-  margin: 4px auto 0;
+  margin: 4px auto 35px;
   font-size: 0.85rem;
   color: #555;
   line-height: 1.5;
@@ -264,9 +280,9 @@ footer a { color: var(--accent); }
 /* beyond 1200px, give the text column more room from the edges */
 @media (min-width: 1200px) {
   .page { padding-left: 60px; padding-right: 60px; }
-  /* 1000 - 2*60, matching .page above */
-  .figure-caption { max-width: 880px; }
-  .figure-embed--rankshift .chart-scroll { max-width: 880px; }
+  /* the text column narrows to 1000 - 2*60, so --text-max follows it and
+     everything keyed to that variable stays on the same left edge */
+  :root { --text-max: 880px; }
 }
 
 @media (max-width: 480px) {
