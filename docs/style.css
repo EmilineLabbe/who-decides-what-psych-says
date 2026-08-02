@@ -235,6 +235,15 @@ footer {
   text-align: center;
 }
 
+.bordered {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.intro {
+  padding-bottom: 15px;
+}
+
 footer a { color: var(--accent); }
 
 /* beyond 1200px, give the text column more room from the edges */
