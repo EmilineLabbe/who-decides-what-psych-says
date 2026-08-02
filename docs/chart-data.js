@@ -78,17 +78,17 @@ window.CHART_SPECS = [
 }},
 {"id": "c2",
  "data": [
-  {"hovertemplate": "<b>United States</b><br>#1 in total science output<br>#3 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [1.0, 3.0], "type": "scatter"},
-  {"hovertemplate": "<b>China</b><br>#2 in total science output<br>#14 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [2.0, 14.0], "type": "scatter"},
-  {"hovertemplate": "<b>Japan</b><br>#3 in total science output<br>#10 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [3.0, 10.0], "type": "scatter"},
+  {"hovertemplate": "<b>China</b><br>#1 in total science output<br>#14 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [1.0, 14.0], "type": "scatter"},
+  {"hovertemplate": "<b>United States</b><br>#2 in total science output<br>#3 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [2.0, 3.0], "type": "scatter"},
+  {"hovertemplate": "<b>India</b><br>#3 in total science output<br>#15 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [3.0, 15.0], "type": "scatter"},
   {"hovertemplate": "<b>Germany</b><br>#4 in total science output<br>#5 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [4.0, 5.0], "type": "scatter"},
-  {"hovertemplate": "<b>United Kingdom</b><br>#5 in total science output<br>#1 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [5.0, 1.0], "type": "scatter"},
-  {"hovertemplate": "<b>India</b><br>#6 in total science output<br>#15 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [6.0, 15.0], "type": "scatter"},
-  {"hovertemplate": "<b>France</b><br>#7 in total science output<br>#7 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [7.0, 7.0], "type": "scatter"},
-  {"hovertemplate": "<b>Italy</b><br>#8 in total science output<br>#8 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [8.0, 8.0], "type": "scatter"},
-  {"hovertemplate": "<b>Canada</b><br>#9 in total science output<br>#2 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [9.0, 2.0], "type": "scatter"},
-  {"hovertemplate": "<b>South Korea</b><br>#10 in total science output<br>#12 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [10.0, 12.0], "type": "scatter"},
-  {"hovertemplate": "<b>Russia</b><br>#11 in total science output<br>#11 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [11.0, 11.0], "type": "scatter"},
+  {"hovertemplate": "<b>Japan</b><br>#5 in total science output<br>#10 by psychology's share of national science output<extra></extra>", "line": {"color": "#7A1E1A", "width": 3}, "marker": {"color": "#7A1E1A", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [5.0, 10.0], "type": "scatter"},
+  {"hovertemplate": "<b>United Kingdom</b><br>#6 in total science output<br>#1 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [6.0, 1.0], "type": "scatter"},
+  {"hovertemplate": "<b>Italy</b><br>#7 in total science output<br>#7 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [7.0, 7.0], "type": "scatter"},
+  {"hovertemplate": "<b>France</b><br>#8 in total science output<br>#8 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [8.0, 8.0], "type": "scatter"},
+  {"hovertemplate": "<b>Russia</b><br>#9 in total science output<br>#12 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [9.0, 12.0], "type": "scatter"},
+  {"hovertemplate": "<b>South Korea</b><br>#10 in total science output<br>#11 by psychology's share of national science output<extra></extra>", "line": {"color": "#C9BFBA", "width": 1.5}, "marker": {"color": "#C9BFBA", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 0.45, "showlegend": false, "x": [0, 1], "y": [10.0, 11.0], "type": "scatter"},
+  {"hovertemplate": "<b>Canada</b><br>#11 in total science output<br>#2 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [11.0, 2.0], "type": "scatter"},
   {"hovertemplate": "<b>Spain</b><br>#12 in total science output<br>#6 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [12.0, 6.0], "type": "scatter"},
   {"hovertemplate": "<b>Brazil</b><br>#13 in total science output<br>#9 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [13.0, 9.0], "type": "scatter"},
   {"hovertemplate": "<b>Australia</b><br>#14 in total science output<br>#4 by psychology's share of national science output<extra></extra>", "line": {"color": "#236534", "width": 3}, "marker": {"color": "#236534", "line": {"color": "white", "width": 0.6}, "size": 9}, "mode": "lines+markers", "opacity": 1.0, "showlegend": false, "x": [0, 1], "y": [14.0, 4.0], "type": "scatter"},
@@ -140,30 +140,6 @@ window.CHART_SPECS = [
   "annotations": [
     {
       "font": {
-        "color": "#C9BFBA",
-        "family": "Libre Franklin",
-        "size": 12
-      },
-      "showarrow": false,
-      "text": "United States",
-      "x": -0.08,
-      "xanchor": "right",
-      "y": 1.0
-    },
-    {
-      "font": {
-        "color": "#C9BFBA",
-        "family": "Libre Franklin",
-        "size": 12
-      },
-      "showarrow": false,
-      "text": "United States",
-      "x": 1.08,
-      "xanchor": "left",
-      "y": 3.0
-    },
-    {
-      "font": {
         "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 12
@@ -172,7 +148,7 @@ window.CHART_SPECS = [
       "text": "China",
       "x": -0.08,
       "xanchor": "right",
-      "y": 2.0
+      "y": 1.0
     },
     {
       "font": {
@@ -188,12 +164,36 @@ window.CHART_SPECS = [
     },
     {
       "font": {
+        "color": "#C9BFBA",
+        "family": "Libre Franklin",
+        "size": 12
+      },
+      "showarrow": false,
+      "text": "United States",
+      "x": -0.08,
+      "xanchor": "right",
+      "y": 2.0
+    },
+    {
+      "font": {
+        "color": "#C9BFBA",
+        "family": "Libre Franklin",
+        "size": 12
+      },
+      "showarrow": false,
+      "text": "United States",
+      "x": 1.08,
+      "xanchor": "left",
+      "y": 3.0
+    },
+    {
+      "font": {
         "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "Japan",
+      "text": "India",
       "x": -0.08,
       "xanchor": "right",
       "y": 3.0
@@ -205,10 +205,10 @@ window.CHART_SPECS = [
         "size": 12
       },
       "showarrow": false,
-      "text": "Japan",
+      "text": "India",
       "x": 1.08,
       "xanchor": "left",
-      "y": 10.0
+      "y": 15.0
     },
     {
       "font": {
@@ -236,6 +236,30 @@ window.CHART_SPECS = [
     },
     {
       "font": {
+        "color": "#7A1E1A",
+        "family": "Libre Franklin",
+        "size": 12
+      },
+      "showarrow": false,
+      "text": "Japan",
+      "x": -0.08,
+      "xanchor": "right",
+      "y": 5.0
+    },
+    {
+      "font": {
+        "color": "#7A1E1A",
+        "family": "Libre Franklin",
+        "size": 12
+      },
+      "showarrow": false,
+      "text": "Japan",
+      "x": 1.08,
+      "xanchor": "left",
+      "y": 10.0
+    },
+    {
+      "font": {
         "color": "#236534",
         "family": "Libre Franklin",
         "size": 12
@@ -244,7 +268,7 @@ window.CHART_SPECS = [
       "text": "United Kingdom",
       "x": -0.08,
       "xanchor": "right",
-      "y": 5.0
+      "y": 6.0
     },
     {
       "font": {
@@ -260,36 +284,12 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#7A1E1A",
-        "family": "Libre Franklin",
-        "size": 12
-      },
-      "showarrow": false,
-      "text": "India",
-      "x": -0.08,
-      "xanchor": "right",
-      "y": 6.0
-    },
-    {
-      "font": {
-        "color": "#7A1E1A",
-        "family": "Libre Franklin",
-        "size": 12
-      },
-      "showarrow": false,
-      "text": "India",
-      "x": 1.08,
-      "xanchor": "left",
-      "y": 15.0
-    },
-    {
-      "font": {
         "color": "#C9BFBA",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "France",
+      "text": "Italy",
       "x": -0.08,
       "xanchor": "right",
       "y": 7.0
@@ -301,7 +301,7 @@ window.CHART_SPECS = [
         "size": 12
       },
       "showarrow": false,
-      "text": "France",
+      "text": "Italy",
       "x": 1.08,
       "xanchor": "left",
       "y": 7.0
@@ -313,7 +313,7 @@ window.CHART_SPECS = [
         "size": 12
       },
       "showarrow": false,
-      "text": "Italy",
+      "text": "France",
       "x": -0.08,
       "xanchor": "right",
       "y": 8.0
@@ -325,34 +325,34 @@ window.CHART_SPECS = [
         "size": 12
       },
       "showarrow": false,
-      "text": "Italy",
+      "text": "France",
       "x": 1.08,
       "xanchor": "left",
       "y": 8.0
     },
     {
       "font": {
-        "color": "#236534",
+        "color": "#C9BFBA",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "Canada",
+      "text": "Russia",
       "x": -0.08,
       "xanchor": "right",
       "y": 9.0
     },
     {
       "font": {
-        "color": "#236534",
+        "color": "#C9BFBA",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "Canada",
+      "text": "Russia",
       "x": 1.08,
       "xanchor": "left",
-      "y": 2.0
+      "y": 12.0
     },
     {
       "font": {
@@ -376,31 +376,31 @@ window.CHART_SPECS = [
       "text": "South Korea",
       "x": 1.08,
       "xanchor": "left",
-      "y": 12.0
+      "y": 11.0
     },
     {
       "font": {
-        "color": "#C9BFBA",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "Russia",
+      "text": "Canada",
       "x": -0.08,
       "xanchor": "right",
       "y": 11.0
     },
     {
       "font": {
-        "color": "#C9BFBA",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 12
       },
       "showarrow": false,
-      "text": "Russia",
+      "text": "Canada",
       "x": 1.08,
       "xanchor": "left",
-      "y": 11.0
+      "y": 2.0
     },
     {
       "font": {
