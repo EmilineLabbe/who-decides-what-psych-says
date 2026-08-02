@@ -97,8 +97,6 @@ h1 {
   font-size: 1.05rem;
   color: #444;
   margin: 0 0 10px;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
 }
 
 .attribution {
