@@ -358,7 +358,7 @@ window.CHART_SPECS = [
     "bordercolor": "rgba(0, 0, 0, 0.1)"
   },
   "margin": {
-    "t": 60,
+    "t": 36,
     "b": 50,
     "l": 20,
     "r": 20
