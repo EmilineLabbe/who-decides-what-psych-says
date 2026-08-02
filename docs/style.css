@@ -45,7 +45,8 @@
   /* chart series colours need to match trace colours in chart-data.js,
      from notebooks/01_data_analysis.ipynb. */
   --series-rose: #236534;   /* rank-shift: rose >3 ranks, China */
-  --series-flat: #C9BFBA;   /* rank-shift: shift of 3 or fewer */
+  --series-flat: #C9BFBA;   /* rank-shift: shift of 3 or fewer; rank bars: outside top 5 */
+  --series-top5: #4A4A4A;   /* rank bars: psychology producers #2-5 */
   --series-uk:   #8C9BA5;
   --series-ca:   #B5A08C;
   --series-de:   #6B5744;
@@ -160,9 +161,10 @@ em { font-style: italic; }
   margin-right: 5px; vertical-align: middle;
 }
 /* one swatch colour per series; --fell and --us share accent red, but charts name their own for readability  */
-.dot--fell, .dot--us { background: var(--accent); }
+.dot--fell, .dot--us, .dot--lead { background: var(--accent); }
 .dot--rose, .dot--cn { background: var(--series-rose); }
-.dot--flat { background: var(--series-flat); }
+.dot--flat, .dot--rest { background: var(--series-flat); }
+.dot--top5 { background: var(--series-top5); }
 .dot--uk   { background: var(--series-uk); }
 .dot--ca   { background: var(--series-ca); }
 .dot--de   { background: var(--series-de); }
@@ -189,6 +191,11 @@ em { font-style: italic; }
 
 /* trend: smaller chart than title */
 .figure-embed--trend .chart-scroll { max-width: 850px; margin: 0 auto; }
+
+/* rank: box spans exactly the text column, same as .figure-caption below.
+   Centring inside the box is done with pixel margins in the Plotly spec (l/r),
+   so the label + bar + value block stays centred at every width. */
+.figure-embed--rankshift .chart-scroll { max-width: var(--text-max); margin: 0 auto; }
 
 /* aligned with the main text column rather than centered under the (wider) figure:
    .figure has the same 20px side padding as .page, so --text-max box
@@ -221,7 +228,9 @@ footer a { color: var(--accent); }
 /* beyond 1200px, give the text column more room from the edges */
 @media (min-width: 1200px) {
   .page { padding-left: 60px; padding-right: 60px; }
-  .figure-caption { max-width: 880px; } /* 1000 - 2*60, matching .page above */
+  /* 1000 - 2*60, matching .page above */
+  .figure-caption { max-width: 880px; }
+  .figure-embed--rankshift .chart-scroll { max-width: 880px; }
 }
 
 @media (max-width: 480px) {

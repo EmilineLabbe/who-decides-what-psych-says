@@ -126,7 +126,7 @@ window.CHART_SPECS = [
   "annotations": [
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "gray",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -152,7 +152,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "gray",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -165,7 +165,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "gray",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -256,7 +256,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#4A4A4A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -295,7 +295,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#4A4A4A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -308,7 +308,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#4A4A4A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -326,11 +326,11 @@ window.CHART_SPECS = [
     "zeroline": false,
     "range": [
       0,
-      4.0622
+      4.446378851064064
     ],
     "domain": [
-      0,
-      1
+      0.26,
+      0.9
     ]
   },
   "yaxis": {
@@ -358,10 +358,10 @@ window.CHART_SPECS = [
     "bordercolor": "rgba(0, 0, 0, 0.1)"
   },
   "margin": {
-    "t": 20,
+    "t": 48,
     "b": 50,
-    "l": 125,
-    "r": 51
+    "l": 20,
+    "r": 20
   },
   "autosize": true,
   "paper_bgcolor": "#FAFAFA",
