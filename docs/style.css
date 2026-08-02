@@ -82,7 +82,7 @@ body {
 
 header.hero {
   text-align: center;
-  margin-bottom: 48px;
+  /* margin-bottom: 24px; */
 }
 
 h1 {
@@ -91,6 +91,7 @@ h1 {
   font-size: 2.1rem;
   line-height: 1.25;
   margin: 0 0 10px;
+  text-align: left;
 }
 
 .subtitle {
@@ -121,6 +122,10 @@ h3 {
   font-weight: 700;
   font-size: 1.1rem;
   margin: 28px 0 10px;
+}
+
+.semibold { 
+  font-weight: 600; 
 }
 
 p { margin: 0 0 18px; }
@@ -206,6 +211,16 @@ em { font-style: italic; }
   font-size: 0.85rem;
   color: #555;
   line-height: 1.5;
+  text-align: left;
+}
+
+.title-caption {
+  max-width: var(--text-max);
+  margin: 0 auto 48px;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: left;
 }
 
 /* text, then a full-width image beneath it */
@@ -236,7 +251,7 @@ footer {
 }
 
 .bordered {
-  border-top: 1px solid var(--rule);
+  /* border-top: 1px solid var(--rule); */
   border-bottom: 1px solid var(--rule);
 }
 
