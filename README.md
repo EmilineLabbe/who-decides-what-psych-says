@@ -2,7 +2,7 @@
 
 __Public understanding of typical human behavior is shaped by the perception of psychology as an authoritative voice.__
 
-Click [here](https://emilinelabbe.github.io/who-decides-what-psych-says/) for the article.
+Click [here](https://emilinelabbe.github.io/who-decides-what-psych-says/) for the write-up.
 
 Publication counts aggregated in National Science Foundation Science & Engineering (NSF S&E) Indicators reflect the current state of affairs, including which countries produce science and how much of it is psychology.
 
