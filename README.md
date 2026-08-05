@@ -17,10 +17,9 @@ Full analysis: [notebooks/01_data_insights.ipynb](notebooks/01_data_insights.ipy
 
 ## Key findings
 _Figures and findings cover 2011–2022 unless noted._
-1. __The US leads the world in psychology.__ It writes a third of the world's psychology (33.8%), nearly double its 17.4% of science. With 4.3% of the global population, it produces psychology at roughly eight times its population share.
-2. __China leads the world in science, yet trails the US, the UK, Canada, and Germany in psychology.__ In cumulative output, China is the only non-WEIRD member of the top five, though by 2022 it had climbed to second in annual output.
-3. __Psychology's share of national output is highest in the WEIRD world.__ Among the top 15 science producers, every WEIRD country devotes at least 2.2% of its output to psychology and every non-WEIRD country devotes 1.3% or less. The UK's rate is thirteen times India's.
-
+1. __Psychology's share of national output is highest in the WEIRD world.__ Among the top 15 science producers, every WEIRD country devotes at least 2.2% of its output to psychology and every non-WEIRD country devotes 1.3% or less. The UK's rate is thirteen times India's.
+2. __The US leads the world in psychology.__ It writes a third of the world's psychology (33.8%), nearly double its 17.4% of science. With 4.3% of the global population, it produces psychology at roughly eight times its population share.
+3. __Psychology is 0.5% of China's science output, but the base is large enough that the volume is still substantial.__ In cumulative output, China is the only non-WEIRD member of the top five, though by 2022 it had climbed to second in annual output.
 4. __The US share of psychology has nearly halved since 2003.__ It fell from 46.8% to 27.7% of annual world psychology output, while China's rose from 0.7% to 11.1%. WEIRD countries produced two-thirds of the world's psychology publications in 2022, down from 90% in 2003.
 
 ## Figures

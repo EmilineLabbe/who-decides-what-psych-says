@@ -50,6 +50,8 @@
   --series-uk:   #8C9BA5;
   --series-ca:   #B5A08C;
   --series-de:   #6B5744;
+  --series-weird: #7A1E1A;
+  --series-notweird: #236534;
   --rule: #DAD7D7;
   --bg: white;
   --content-max: 1000px; /* text column and figures */
@@ -186,7 +188,8 @@ em { font-style: italic; }
 .dot--uk   { background: var(--series-uk); }
 .dot--ca   { background: var(--series-ca); }
 .dot--de   { background: var(--series-de); }
-
+.dot--weird { background: var(--series-weird); }
+.dot--notweird { background: var(--series-notweird); }
 /* chart box sizes, map is driven by the padding-top aspect box below; other two are
    the fixed heights from export */
 .plotly-graph-div { width: 100%; }

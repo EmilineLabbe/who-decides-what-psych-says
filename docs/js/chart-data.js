@@ -78,7 +78,7 @@ window.CHART_SPECS = [
 }},
 {"id": "c2",
  "data": [
-  {"hoverinfo": "skip", "marker": {"color": ["#C9BFBA", "#4A4A4A", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#C9BFBA", "#4A4A4A", "#C9BFBA", "#7A1E1A", "#4A4A4A", "#4A4A4A"]}, "orientation": "h", "showlegend": false, "x": [0.257, 0.451, 0.597, 0.727, 0.729, 0.955, 1.277, 2.24, 2.32, 2.787, 2.882, 3.446, 3.788, 3.929, 4.042], "y": ["India", "China", "Iran", "Russia", "South Korea", "Japan", "Brazil", "France", "Italy", "Spain", "Germany", "Australia", "United States", "Canada", "United Kingdom"], "type": "bar"}
+  {"hoverinfo": "skip", "marker": {"color": ["#236534", "#236534", "#236534", "#236534", "#236534", "#236534", "#236534", "#7A1E1A", "#7A1E1A", "#7A1E1A", "#7A1E1A", "#7A1E1A", "#7A1E1A", "#7A1E1A", "#7A1E1A"]}, "orientation": "h", "showlegend": false, "x": [0.257, 0.451, 0.597, 0.727, 0.729, 0.955, 1.277, 2.24, 2.32, 2.787, 2.882, 3.446, 3.788, 3.929, 4.042], "y": ["India", "China", "Iran", "Russia", "South Korea", "Japan", "Brazil", "France", "Italy", "Spain", "Germany", "Australia", "United States", "Canada", "United Kingdom"], "type": "bar"}
  ],
  "layout": {
   "template": {
@@ -126,7 +126,7 @@ window.CHART_SPECS = [
   "annotations": [
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -139,7 +139,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -152,7 +152,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -165,7 +165,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -178,7 +178,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -191,7 +191,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -204,7 +204,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#236534",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -217,7 +217,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -230,7 +230,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -243,7 +243,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -256,7 +256,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -269,7 +269,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "gray",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -295,7 +295,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
@@ -308,7 +308,7 @@ window.CHART_SPECS = [
     },
     {
       "font": {
-        "color": "#4A4A4A",
+        "color": "#7A1E1A",
         "family": "Libre Franklin",
         "size": 11
       },
