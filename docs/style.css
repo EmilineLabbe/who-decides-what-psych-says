@@ -154,7 +154,7 @@ em { font-style: italic; }
 /* charts stay centred in .chart-wrap, but titles, subtitles and
    legends sit in --text-max box so left edge lines up with body */
 .chart-title {
-  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700;
+  font-family: var(--font-serif); font-size: 1rem; font-weight: 700;
   text-align: left;
   max-width: var(--text-max);
   margin-left: auto; margin-right: auto;
