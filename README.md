@@ -18,7 +18,7 @@ _Figures and findings cover 2011–2022 unless noted._
 4. __The US share of psychology has nearly halved since 2003.__ It fell from 46.8% to 27.7% of annual world psychology output, while China's rose from 0.7% to 11.1%. WEIRD countries produced two-thirds of the world's psychology publications in 2022, down from 90% in 2003.
 
 ## Figures
+![psych share ranking](figures/psych_share_ranked.png)
 ![main map](figures/main_map.png)
 ![science vs psych scatter](figures/science_vs_psych_scatter.png)
-![psych share ranking](figures/psych_share_ranked.png)
 ![global psych share over time](figures/global_share_overtime.png)
