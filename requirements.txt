@@ -14,7 +14,6 @@ statsmodels==0.14.5  # PPML via GLM Poisson
 plotly==6.3.1
 kaleido==1.2.0       # static PNG export in figures/
 matplotlib==3.10.5
-cmcrameri==1.10
 
 # notebooks
 ipykernel==6.29.5
