@@ -44,14 +44,15 @@
   --accent-hover: #A3473F;
   /* chart series colours need to match trace colours in chart-data.js,
      from notebooks/01_data_analysis.ipynb. */
-  --series-rose: #236534;   /* rank-shift: rose >3 ranks, China */
-  --series-flat: #C9BFBA;   /* rank-shift: shift of 3 or fewer; rank bars: outside top 5 */
-  --series-top5: #4A4A4A;   /* rank bars: psychology producers #2-5 */
-  --series-uk:   #8C9BA5;
-  --series-ca:   #B5A08C;
-  --series-de:   #6B5744;
-  --series-weird: #7A1E1A;
-  --series-notweird: #236534;
+  /* supporting series are sampled off the map's turku ramp so every figure
+     reads as one scheme; see the palette block in 01_data_insights.ipynb */
+  --series-flat: #fbc5c0;   /* unlabelled scatter markers */
+  --series-top5: #6c6b4a;   /* secondary scatter labels */
+  --series-uk:   #7d7b51;
+  --series-ca:   #efb1a1;
+  --series-de:   #2e2e28;
+  --series-weird: #02397a;
+  --series-notweird: #d55e00;
   --rule: #DAD7D7;
   --bg: white;
   --content-max: 1000px; /* text column and figures */
@@ -180,9 +181,10 @@ em { font-style: italic; }
   display: inline-block; width: 9px; height: 9px; border-radius: 50%;
   margin-right: 5px; vertical-align: middle;
 }
-/* one swatch colour per series; --fell and --us share accent red, but charts name their own for readability  */
-.dot--fell, .dot--us, .dot--lead { background: var(--accent); }
-.dot--rose, .dot--cn { background: var(--series-rose); }
+/* one swatch colour per series; the us/cn pair mirrors --series-weird / --series-notweird  */
+.dot--fell, .dot--lead { background: var(--accent); }
+.dot--us   { background: var(--series-weird); }
+.dot--cn   { background: var(--series-notweird); }
 .dot--flat, .dot--rest { background: var(--series-flat); }
 .dot--top5 { background: var(--series-top5); }
 .dot--uk   { background: var(--series-uk); }
