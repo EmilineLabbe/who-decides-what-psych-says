@@ -1,0 +1,20 @@
+# Python 3.13
+
+# data
+pandas==2.3.2
+numpy==2.2.5
+openpyxl==3.1.5      # reads the NSF .xlsx tables in 
+pycountry==24.6.1    # ISO-3 country codes
+
+# analysis
+scipy==1.16.0
+statsmodels==0.14.5  # PPML via GLM Poisson
+
+# figures
+plotly==6.3.1
+kaleido==1.2.0       # static PNG export in figures/
+matplotlib==3.10.5
+cmcrameri==1.10
+
+# notebooks
+ipykernel==6.29.5
