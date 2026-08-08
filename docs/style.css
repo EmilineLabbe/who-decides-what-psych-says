@@ -44,15 +44,14 @@
   --accent-hover: #A3473F;
   /* chart series colours need to match trace colours in chart-data.js,
      from notebooks/01_data_analysis.ipynb. */
-  /* supporting series are sampled off the map's turku ramp so every figure
-     reads as one scheme; see the palette block in 01_data_insights.ipynb */
-  --series-flat: #fbc5c0;   /* unlabelled scatter markers */
-  --series-top5: #6c6b4a;   /* secondary scatter labels */
-  --series-uk:   #7d7b51;
-  --series-ca:   #efb1a1;
-  --series-de:   #2e2e28;
-  --series-weird: #02397a;
-  --series-notweird: #d55e00;
+  /* one colour per country, shared by the trend chart and the scatter; see the
+     palette block in 01_data_insights.ipynb, which prints these on run */
+  --series-flat: #8C9495;   /* unlabelled scatter markers */
+  --series-uk:   #448DD4;
+  --series-ca:   #4E8C7B;
+  --series-de:   #AA5D28;
+  --series-weird: #733D47;
+  --series-notweird: #D1A830;
   --rule: #DAD7D7;
   --bg: white;
   --content-max: 1000px; /* text column and figures */
@@ -186,7 +185,6 @@ em { font-style: italic; }
 .dot--us   { background: var(--series-weird); }
 .dot--cn   { background: var(--series-notweird); }
 .dot--flat, .dot--rest { background: var(--series-flat); }
-.dot--top5 { background: var(--series-top5); }
 .dot--uk   { background: var(--series-uk); }
 .dot--ca   { background: var(--series-ca); }
 .dot--de   { background: var(--series-de); }
