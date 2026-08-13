@@ -30,8 +30,7 @@ See [data/README.md](data/README.md) for raw data sources and licenses.
 ├── docs/                           # GitHub Pages write-up
 │   ├── index.html                  # the article
 │   └── js/chart-data.js            # Plotly specs, written by notebook 01
-├── requirements.txt
-└── CITATION.cff
+└── requirements.txt
 ```
 
 ## Key findings
