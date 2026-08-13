@@ -1,6 +1,6 @@
 # Data sources and licensing
 
-Files in `raw/` are exactly as downloaded, opaque export filenames included, so the pipeline reproduces from the same bytes. All retrieved July 2026.
+All files in `raw/` retrieved July 2026.
 
 | Source | Files | Selection | License |
 |---|---|---|---|
@@ -10,11 +10,11 @@ Files in `raw/` are exactly as downloaded, opaque export filenames included, so 
 
 World Bank series codes, grouped as in `00_data_processing.ipynb`:
 
-- income — `NY.GDP.PCAP.CD`, `NY.GDP.PCAP.PP.CD`, `NY.GDP.PCAP.PP.KD`, `NY.GNP.PCAP.CD`, `NY.GNP.PCAP.PP.CD`, `NY.GNP.PCAP.PP.KD`
-- education — `SE.TER.ENRR`, `SE.XPD.TOTL.GD.ZS`, `SE.XPD.TOTL.GB.ZS`, `SE.XPD.TERT.ZS`
-- research capacity — `GB.XPD.RSDV.GD.ZS`, `SP.POP.SCIE.RD.P6`
-- connectivity and urbanisation — `IT.NET.USER.ZS`, `SP.URB.TOTL.IN.ZS`
-- population and science base — `SP.POP.TOTL`, `IP.JRN.ARTC.SC`
+- income - `NY.GDP.PCAP.CD`, `NY.GDP.PCAP.PP.CD`, `NY.GDP.PCAP.PP.KD`, `NY.GNP.PCAP.CD`, `NY.GNP.PCAP.PP.CD`, `NY.GNP.PCAP.PP.KD`
+- education - `SE.TER.ENRR`, `SE.XPD.TOTL.GD.ZS`, `SE.XPD.TOTL.GB.ZS`, `SE.XPD.TERT.ZS`
+- research capacity - `GB.XPD.RSDV.GD.ZS`, `SP.POP.SCIE.RD.P6`
+- connectivity and urbanisation - `IT.NET.USER.ZS`, `SP.URB.TOTL.IN.ZS`
+- population and science base - `SP.POP.TOTL`, `IP.JRN.ARTC.SC`
 
 ## Modifications
 
