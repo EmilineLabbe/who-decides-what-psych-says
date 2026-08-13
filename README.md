@@ -29,7 +29,10 @@ See [data/README.md](data/README.md) for raw data sources and licenses.
 ├── figures/                        # PNG figures, written by notebook 01
 ├── docs/                           # GitHub Pages write-up
 │   ├── index.html                  # the article
-│   └── js/chart-data.js            # Plotly specs, written by notebook 01
+│   ├── style.css
+│   └── js/
+│       ├── charts.js               # renders the specs, responsive hover labels
+│       └── chart-data.js           # Plotly specs, written by notebook 01
 └── requirements.txt
 ```
 
