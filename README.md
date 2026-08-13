@@ -17,7 +17,6 @@ See [data/README.md](data/README.md) for raw data sources and licenses.
 
 ## Repository layout
 ```
-
 ├── notebooks/
 │   ├── 00_data_processing.ipynb    # builds the merged country-year table
 │   ├── 01_data_insights.ipynb      # analysis, models, and figures
