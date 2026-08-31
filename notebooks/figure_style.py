@@ -10,7 +10,7 @@ from pathlib import Path
 
 import plotly.graph_objects as go
 
-SERIF, SANS, BG = "Libre Baskerville", "Libre Franklin", "white"
+SERIF, SANS, BG = "Newsreader", "IBM Plex Sans", "white"
 
 # https://www.datawrapper.de/blog/colors-for-data-vis-style-guides for color reference
 

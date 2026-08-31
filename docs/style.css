@@ -1,45 +1,34 @@
 
-/* Fonts */
+/* Fonts. Both faces are variable, so one file per style covers the whole weight
+   range; Newsreader's opsz axis is applied by the browser at each size. */
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('fonts/Libre_Baskerville/static/LibreBaskerville-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'Newsreader';
+    src: url('fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 200 800;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('fonts/Libre_Baskerville/static/LibreBaskerville-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-family: 'Newsreader';
+    src: url('fonts/Newsreader/Newsreader-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 200 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 700;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/Libre_Franklin/static/LibreFranklin-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/Libre_Franklin/static/LibreFranklin-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/Libre_Franklin/static/LibreFranklin-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/Libre_Franklin/static/LibreFranklin-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: italic;
 }
 
 :root {
-  --font-serif: 'Libre Baskerville', serif;
-  --font-sans: 'Libre Franklin', sans-serif;
+  --font-serif: 'Newsreader', serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
   --accent: #7A1E1A;
   --accent-hover: #A3473F;
   /* chart series colours need to match trace colours in chart-data.js,
@@ -53,6 +42,7 @@
   --series-weird: #733D47;
   --series-notweird: #D1A830;
   --rule: #DAD7D7;
+  --rule-strong: #9A9A9A; /* table head/foot rules, a step up from --rule */
   --bg: white;
   --content-max: 1000px; /* text column and figures */
   --text-max: 960px;     /* content-max minus .page's 20px side padding */
@@ -70,7 +60,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: black;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 1rem;
   line-height: 1.65;
   overflow-x: hidden; /* safety for the .figure breakout's 100vw width below */
@@ -88,7 +78,7 @@ header.hero {
 }
 
 h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 2.1rem;
   line-height: 1.25;
@@ -111,7 +101,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.45rem;
   margin: 56px 0 18px;
@@ -120,7 +110,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.1rem;
   margin: 28px 0 10px;
@@ -280,6 +270,135 @@ footer {
 }
 
 footer a { color: var(--accent); }
+
+/* Tables carry the same title block as the figures (.chart-title /
+   .chart-subtitle) so a table and a chart read as the same kind of object.
+   Rules run between horizontal bands only, never between columns. */
+.table-block {
+  max-width: var(--text-max);
+  margin: 32px auto 35px;
+}
+.table-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0 0 2px;
+}
+.table-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+/* narrow screens scroll the table rather than crushing the columns */
+.table-scroll { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  /* fixed-width digits keep the numeric columns aligned down the page */
+  font-variant-numeric: tabular-nums;
+}
+thead th {
+  font-weight: 600;
+  text-align: left;
+  color: #555; /* labels recede so the data reads first */
+  white-space: nowrap;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:last-child td { border-bottom: 1px solid var(--rule-strong); }
+th, td { padding: 7px 0; vertical-align: top; }
+th + th, td + td { padding-left: 20px; }
+th.num, td.num { text-align: right; }
+/* the row a table exists to make: the one measure that does separate the groups */
+tbody tr.is-key td { font-weight: 600; }
+
+.table-note {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+/* Contents rail. Sits to the left of the text column; below the breakpoint it is
+   display:none, which also takes it out of the tab order. */
+:root {
+  --toc-width: 180px;
+  --toc-gap: 40px;
+  /* Half the rail column. The rail and the text column are centred together as
+     one group rather than the text column being centred alone, so the gutter
+     holding the rail is not mirrored as dead space on the right. That pays for
+     the rail once instead of twice: 1280px instead of 1440px. */
+  --toc-shift: calc((var(--toc-width) + var(--toc-gap)) / 2);
+}
+
+.toc { display: none; }
+
+/* 1000px column + 220px rail column + 30px margins each side */
+@media (min-width: 1280px) {
+  /* Nudging .page also moves the figures: .figure's 100vw breakout is measured
+     from .page, so it carries the same offset and the charts stay centred on
+     the text column's axis. */
+  .page {
+    margin-left: calc(50% - (var(--content-max) / 2) + var(--toc-shift));
+    margin-right: 0;
+  }
+
+  .toc {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: max(16px, calc(50% - (var(--content-max) / 2) + var(--toc-shift)
+                          - var(--toc-gap) - var(--toc-width)));
+    width: var(--toc-width);
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+}
+
+.toc ul { list-style: none; margin: 0; padding: 0; }
+
+.toc li {
+  margin: 0;
+  padding: 5px 0 5px 13px;
+  border-left: 2px solid var(--rule);
+}
+/* second-level entries sit in from the part headings they belong to */
+.toc li.toc--sub { padding-left: 25px; }
+
+.toc a {
+  position: relative;
+  display: block;
+  color: #777;
+  text-decoration: none;
+}
+/* An invisible bold copy of the label sets each item's box. The real text is
+   layered over it, so an item wraps to the same number of lines whether or not
+   it is the active one and nothing below it moves as you scroll. */
+.toc a::before {
+  content: attr(data-label);
+  visibility: hidden;
+  font-weight: 600;
+}
+.toc a span { position: absolute; inset: 0; }
+
+.toc a:hover { color: black; }
+
+.toc li.is-active { border-left-color: var(--accent); }
+.toc li.is-active a { color: black; font-weight: 600; }
+
+/* anchor jumps leave the heading clear of the top edge rather than flush to it */
+h2, h3 { scroll-margin-top: 24px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
 /* beyond 1200px, give the text column more room from the edges */
 @media (min-width: 1200px) {
