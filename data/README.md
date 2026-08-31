@@ -18,7 +18,7 @@ World Bank series codes, grouped as in `00_data_processing.ipynb`:
 
 ## Modifications
 
-`00_data_processing.ipynb` drops NSF regional aggregate rows, standardises country labels to ISO-3 (`notebooks/iso_codes.py`), converts World Bank `..` sentinels to missing, reshapes both sources to one row per country-year, and merges them. Taiwan has no World Bank rows, so DGBAS population and GDP per capita stand in; those rows carry `data_source_flag`.
+`00_data_processing.ipynb` drops NSF regional aggregate rows, standardises country labels to ISO-3 (`notebooks/iso_codes.py`), converts World Bank `..` sentinels to missing, reshapes both sources to one row per country-year, and merges them. Taiwan has no World Bank rows. DGBAS population and GDP per capita stand in, and those rows carry `data_source_flag`.
 
 ## Reuse
 

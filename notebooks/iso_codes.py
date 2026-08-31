@@ -1,8 +1,8 @@
 """Country-code standardization and NSF SPBS table loading for 00_data_processing.ipynb.
 
 ISO-3 codes are the merge key across all four data sources. NSF, the World Bank,
-and pycountry each spell a handful of countries differently, so the pycountry
-lookups are paired with explicit override maps.
+and pycountry each spell a handful of countries differently. Explicit override maps
+accompany the pycountry lookups.
 """
 
 import pandas as pd
@@ -125,7 +125,6 @@ def load_nsf_table(path, sheet_name, value_name, drop_cols=None):
     df["iso_alpha"] = df["iso_alpha"].fillna(df["Country"].map(nsf_iso_map))
 
     unmatched_iso = df[df["iso_alpha"].isna()]
-    print(f"{sheet_name}: unmatched ISO codes = {len(unmatched_iso)}")
     if len(unmatched_iso):
         display(unmatched_iso[["Country", value_name]])
 
@@ -136,8 +135,10 @@ def load_nsf_table(path, sheet_name, value_name, drop_cols=None):
     df["Country"] = df["Country"].replace(country_name_fixes)
 
     unmatched_names = df[df["Country"].isna()]
-    print(f"{sheet_name}: unmatched country names = {len(unmatched_names)}")
     if len(unmatched_names):
         display(unmatched_names[["iso_alpha", value_name]])
+
+    print(f"{sheet_name:<16} {df['iso_alpha'].nunique():>4} countries  "
+          f"{len(unmatched_iso)} unmatched ISO codes  {len(unmatched_names)} unmatched names")
 
     return df

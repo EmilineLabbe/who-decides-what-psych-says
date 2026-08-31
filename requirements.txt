@@ -17,3 +17,7 @@ matplotlib==3.10.5
 
 # notebooks
 ipykernel==6.29.5
+
+# tests
+pytest==9.1.1        # tests/, run with `pytest` from the repo root
+

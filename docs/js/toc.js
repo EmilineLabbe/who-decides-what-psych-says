@@ -3,10 +3,10 @@
 (function () {
   'use strict';
 
-  /* h2 does two things: section headings and chart titles; only the section headings belong in the rail. */
+  /* Section headings and chart titles share the h2 element; only the section headings belong in the rail. */
   var SELECTOR = 'article h2:not(.chart-title), article h3';
 
-  /* how far down the viewport a heading counts as "the section you are in" */
+  /* How far down the viewport a heading counts as "the section you are in". */
   var CROSS_LINE = 120;
 
   function slugify(text) {
@@ -15,7 +15,7 @@
       .replace(/^-+|-+$/g, '');
   }
 
-  /* prefer a short data-toc label over the full heading text, which is often a
+  /* Prefer a short data-toc label over the full heading text, which is often a
      whole sentence and would wrap to five lines in a 190px column */
   function labelFor(heading) {
     return heading.getAttribute('data-toc') || heading.textContent.trim();
@@ -42,7 +42,7 @@
 
       var link = document.createElement('a');
       link.href = '#' + heading.id;
-      /* the ::before ghost that reserves the bold width reads this attribute */
+      /* Read by the ::before ghost that reserves the bold width. */
       link.setAttribute('data-label', label);
       var span = document.createElement('span');
       span.textContent = label;
@@ -60,7 +60,7 @@
     return items;
   }
 
-  /* active entry is the last heading whose top has passed CROSS_LINE */
+  /* The active entry is the last heading whose top has passed CROSS_LINE */
   function activeIndex(headings) {
     var atBottom = window.innerHeight + window.scrollY >=
                    document.body.scrollHeight - 2;

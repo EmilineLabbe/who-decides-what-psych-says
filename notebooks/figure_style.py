@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 
 SERIF, SANS, BG = "Newsreader", "IBM Plex Sans", "white"
 
-# https://www.datawrapper.de/blog/colors-for-data-vis-style-guides for color reference
+# Colour reference: https://www.datawrapper.de/blog/colors-for-data-vis-style-guides
 
 LEAD, ALT = "#733D47", "#D1A830"          # United States, China
 UK_C, CA_C, DE_C = "#448DD4", "#4E8C7B", "#AA5D28"
@@ -56,7 +56,7 @@ def titled(fig, title, subtitle, legend=None, png=None, height=600, margin=None,
         ),
     )
     if legend:
-        # annotations take paper coordinates only, so convert from pixels;
+        # Annotations take paper coordinates only. Convert from pixels;
         # 48px under the title puts the legend below the subtitle, as index.html has it
         left, right = out.layout.margin.l, out.layout.margin.r
         plot_height = height - out.layout.margin.t - out.layout.margin.b

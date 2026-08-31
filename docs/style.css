@@ -1,6 +1,6 @@
 
-/* Fonts. Both faces are variable, so one file per style covers the whole weight
-   range; Newsreader's opsz axis is applied by the browser at each size. */
+/* Fonts. Both faces are variable. One file per style covers the whole weight
+   range. The browser applies Newsreader's opsz axis at each size. */
 @font-face {
     font-family: 'Newsreader';
     src: url('fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('truetype');
@@ -31,26 +31,26 @@
   --font-sans: 'IBM Plex Sans', sans-serif;
   --accent: #7A1E1A;
   --accent-hover: #A3473F;
-  /* chart series colours need to match trace colours in chart-data.js,
+  /* Chart series colours must match the trace colours in chart-data.js,
      from notebooks/01_data_analysis.ipynb. */
-  /* one colour per country, shared by the trend chart and the scatter; see the
+  /* One colour per country, shared by the trend chart and the scatter; see the
      palette block in 01_data_insights.ipynb, which prints these on run */
-  --series-flat: #8C9495;   /* unlabelled scatter markers */
+  --series-flat: #8C9495;   /* Unlabelled scatter markers */
   --series-uk:   #448DD4;
   --series-ca:   #4E8C7B;
   --series-de:   #AA5D28;
   --series-weird: #733D47;
   --series-notweird: #D1A830;
   --rule: #DAD7D7;
-  --rule-strong: #9A9A9A; /* table head/foot rules, a step up from --rule */
+  --rule-strong: #9A9A9A; /* Table head/foot rules, a step up from --rule */
   --bg: white;
-  --content-max: 1000px; /* text column and figures */
-  --text-max: 960px;     /* content-max minus .page's 20px side padding */
+  --content-max: 1000px; /* Text column and figures */
+  --text-max: 960px;     /* --content-max minus .page's 20px side padding */
 }
 
 * { box-sizing: border-box; }
 
-/* fluid type scale: root font-size (and everything rem below)
+/* Fluid type scale: the root font-size, and every rem below it,
    scales continuously with viewport width */
 html {
   font-size: clamp(15px, calc(12.82px + 0.68vw), 18px);
@@ -63,7 +63,7 @@ body {
   font-family: var(--font-serif);
   font-size: 1rem;
   line-height: 1.65;
-  overflow-x: hidden; /* safety for the .figure breakout's 100vw width below */
+  overflow-x: hidden; /* Safety for the .figure breakout's 100vw width below */
 }
 
 .page {
@@ -126,7 +126,7 @@ ul { margin: 0 0 18px; padding-left: 1.3em; }
 li { margin-bottom: 6px; }
 
 ol li::marker {
-  font-weight: 600; /* semi-bold */
+  font-weight: 600; /* Semi-bold */
 }
 
 a { color: var(--accent); }
@@ -134,7 +134,7 @@ a:hover { color: var(--accent-hover); }
 
 em { font-style: italic; }
 
-/* figures break out of the text column by spanning the full viewport width
+/* Figures break out of the text column by spanning the full viewport width
    and re-centering their own content (.chart-wrap) at --content-max */
 .figure {
   width: 100vw;
@@ -143,7 +143,7 @@ em { font-style: italic; }
 }
 
 .chart-wrap { max-width: var(--content-max); margin: 0 auto; }
-/* charts stay centred in .chart-wrap, but titles, subtitles and
+/* Charts stay centred in .chart-wrap, but titles, subtitles and
    legends sit in --text-max box so left edge lines up with body */
 .chart-title {
   font-family: var(--font-sans); font-size: 1rem; font-weight: 700;
@@ -171,7 +171,7 @@ em { font-style: italic; }
   display: inline-block; width: 9px; height: 9px; border-radius: 50%;
   margin-right: 5px; vertical-align: middle;
 }
-/* one swatch colour per series; the us/cn pair mirrors --series-weird / --series-notweird  */
+/* One swatch colour per series; the US/CN pair mirrors --series-weird and --series-notweird. */
 .dot--fell, .dot--lead { background: var(--accent); }
 .dot--us   { background: var(--series-weird); }
 .dot--cn   { background: var(--series-notweird); }
@@ -181,24 +181,24 @@ em { font-style: italic; }
 .dot--de   { background: var(--series-de); }
 .dot--weird { background: var(--series-weird); }
 .dot--notweird { background: var(--series-notweird); }
-/* chart box sizes, map is driven by the padding-top aspect box below; other two are
+/* Chart box sizes. The map is driven by the padding-top aspect box below; the other two are
    the fixed heights from export */
 .plotly-graph-div { width: 100%; }
 .figure-embed--rankshift .plotly-graph-div { height: 480px; }
 .figure-embed--trend .plotly-graph-div { height: 460px; }
 
-/* charts have no min-width; overflow-x stays as a guard only.
+/* Charts have no min-width; overflow-x stays as a guard only.
    the --text-max box puts every chart's left edge on the body text column */
 .chart-scroll {
   overflow-x: auto;
-  /* overflow-y would otherwise compute to auto and give the map a scrollbar for
+  /* Leaving overflow-y to compute as auto would give the map a scrollbar for
      the sub-pixel left over by its calc() aspect box */
   overflow-y: hidden;
   max-width: var(--text-max);
   margin-left: auto; margin-right: auto;
 }
 
-/* map only - leaving the map area any wider than 2:1 makes
+/* Map only. Leaving the map area any wider than 2:1 makes
    plotly letterbox the projection horizontally and the map stops sitting flush
    with the text column */
 .figure-embed--map .chart-inner {
@@ -211,7 +211,7 @@ em { font-style: italic; }
   width: 100% !important; height: 100% !important;
 }
 
-/* trend: smaller chart than title, flush left inside the text column */
+/* Trend: a smaller chart than its title, flush left inside the text column. */
 .figure-embed--trend .chart-inner { max-width: 850px; }
 
 
@@ -233,7 +233,7 @@ em { font-style: italic; }
   text-align: left;
 }
 
-/* text, then a full-width image beneath it */
+/* Text, then a full-width image beneath it. */
 .split { margin: 0 0 18px; }
 
 .split-media { margin: 0; }
@@ -290,7 +290,7 @@ footer a { color: var(--accent); }
   font-weight: 700;
   margin: 0 0 10px;
 }
-/* narrow screens scroll the table rather than crushing the columns */
+/* Narrow screens scroll the table rather than crushing the columns. */
 .table-scroll { overflow-x: auto; }
 
 table {
@@ -298,13 +298,13 @@ table {
   border-collapse: collapse;
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  /* fixed-width digits keep the numeric columns aligned down the page */
+  /* Fixed-width digits keep the numeric columns aligned down the page. */
   font-variant-numeric: tabular-nums;
 }
 thead th {
   font-weight: 600;
   text-align: left;
-  color: #555; /* labels recede so the data reads first */
+  color: #555; /* Labels recede so the data reads first */
   white-space: nowrap;
   border-top: 1px solid var(--rule-strong);
   border-bottom: 1px solid var(--rule);
@@ -313,7 +313,7 @@ tbody tr:last-child td { border-bottom: 1px solid var(--rule-strong); }
 th, td { padding: 7px 0; vertical-align: top; }
 th + th, td + td { padding-left: 20px; }
 th.num, td.num { text-align: right; }
-/* the row a table exists to make: the one measure that does separate the groups */
+/* The row the table exists to make: the one measure that does separate the groups. */
 tbody tr.is-key td { font-weight: 600; }
 
 .table-note {
@@ -329,9 +329,9 @@ tbody tr.is-key td { font-weight: 600; }
   --toc-width: 180px;
   --toc-gap: 40px;
   /* Half the rail column. The rail and the text column are centred together as
-     one group rather than the text column being centred alone, so the gutter
-     holding the rail is not mirrored as dead space on the right. That pays for
-     the rail once instead of twice: 1280px instead of 1440px. */
+     one group rather than the text column being centred alone. The gutter
+     holding the rail is then not mirrored as dead space on the right. That pays
+     for the rail once instead of twice: 1280px instead of 1440px. */
   --toc-shift: calc((var(--toc-width) + var(--toc-gap)) / 2);
 }
 
@@ -339,9 +339,9 @@ tbody tr.is-key td { font-weight: 600; }
 
 /* 1000px column + 220px rail column + 30px margins each side */
 @media (min-width: 1280px) {
-  /* Nudging .page also moves the figures: .figure's 100vw breakout is measured
-     from .page, so it carries the same offset and the charts stay centred on
-     the text column's axis. */
+  /* Nudging .page also moves the figures. .figure's 100vw breakout is measured
+     from .page. It carries the same offset, and the charts stay centred on the
+     text column's axis. */
   .page {
     margin-left: calc(50% - (var(--content-max) / 2) + var(--toc-shift));
     margin-right: 0;
@@ -369,7 +369,7 @@ tbody tr.is-key td { font-weight: 600; }
   padding: 5px 0 5px 13px;
   border-left: 2px solid var(--rule);
 }
-/* second-level entries sit in from the part headings they belong to */
+/* Second-level entries sit in from the headings they belong to. */
 .toc li.toc--sub { padding-left: 25px; }
 
 .toc a {
@@ -379,8 +379,8 @@ tbody tr.is-key td { font-weight: 600; }
   text-decoration: none;
 }
 /* An invisible bold copy of the label sets each item's box. The real text is
-   layered over it, so an item wraps to the same number of lines whether or not
-   it is the active one and nothing below it moves as you scroll. */
+   layered over it. An item wraps to the same number of lines whether or not it
+   is the active one, and nothing below it moves as you scroll. */
 .toc a::before {
   content: attr(data-label);
   visibility: hidden;
@@ -393,18 +393,18 @@ tbody tr.is-key td { font-weight: 600; }
 .toc li.is-active { border-left-color: var(--accent); }
 .toc li.is-active a { color: black; font-weight: 600; }
 
-/* anchor jumps leave the heading clear of the top edge rather than flush to it */
+/* Anchor jumps leave the heading clear of the top edge rather than flush to it. */
 h2, h3 { scroll-margin-top: 24px; }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }
 
-/* beyond 1200px, give the text column more room from the edges */
+/* Beyond 1200px, give the text column more room from the edges. */
 @media (min-width: 1200px) {
   .page { padding-left: 60px; padding-right: 60px; }
-  /* the text column narrows to 1000 - 2*60, so --text-max follows it and
-     everything keyed to that variable stays on the same left edge */
+  /* The text column narrows to 1000 - 2*60. --text-max follows it, and
+     everything keyed to that variable stays on the same left edge. */
   :root { --text-max: 880px; }
 }
 
