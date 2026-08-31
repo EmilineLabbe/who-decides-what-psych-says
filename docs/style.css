@@ -396,6 +396,9 @@ tbody tr.is-key td { font-weight: 600; }
 /* Anchor jumps leave the heading clear of the top edge rather than flush to it. */
 h2, h3 { scroll-margin-top: 24px; }
 
+/* The rail focuses the heading it scrolls to; the scroll is the visible feedback. */
+h2[tabindex="-1"]:focus, h3[tabindex="-1"]:focus { outline: none; }
+
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
 }

@@ -48,6 +48,19 @@
       span.textContent = label;
       link.appendChild(span);
 
+      /* A hash href pushes a history entry per click, burying the page the reader
+         arrived from under a stack of anchors. */
+      link.addEventListener('click', function (event) {
+        /* Modified clicks still belong to the browser: new tab, new window. */
+        if (event.button !== 0 || event.metaKey || event.ctrlKey ||
+            event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        heading.scrollIntoView();
+        /* Focus follows the scroll so keyboard and screen readers land in the section. */
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      });
+
       var item = document.createElement('li');
       if (heading.tagName === 'H3') item.classList.add('toc--sub');
       item.appendChild(link);
